@@ -1,0 +1,13 @@
+region = "us-east-1"               #define region where you want you setup to be
+vpc_cidr =      "10.0.0.0/16"      #provide cidr value for vpc give in /16 to have enough ips for later use
+subnet_cidr =   "10.0.1.0/24"      #provide 1st subnet cidr value
+subnet1_cidr =  "10.0.2.0/24"      #provide 2nd subnet cidr value
+subnet2_cidr =  "10.0.3.0/24"      #provide 3rd subnet cidr value
+subnet3_cidr =  "10.0.4.0/24"      #provide 4th subnet cidr value
+subnet4_cidr =  "10.0.5.0/24"      #provide 5th subnet cidr 
+subnet5_cidr =  "10.0.6.0/24"      #provide 6th subnet cidr value
+rds_user     =  "admin"            #User id to login in RDS
+rds_password = "Test-db333"    #Password to login in RDS
+db_instance_type = "db.t2.micro"   #instance type of your database
+server_instance_type = "t2.micro"           #instance type of your servers
+server_ami = "ami-087c17d1fe0178315"        #amazon linux ami id, to craete servers

@@ -1,7 +1,7 @@
 # Creating 1st EC2 instance in Public Subnet
 resource "aws_instance" "demoinstance" {
-  ami                         = "ami-087c17d1fe0178315"
-  instance_type               = "t2.micro"
+  ami                         = var.server_ami
+  instance_type               = var.server_instance_type
   count                       = 1
   key_name                    = "awslearning"
   vpc_security_group_ids      = ["${aws_security_group.demosg.id}"]
@@ -16,8 +16,8 @@ resource "aws_instance" "demoinstance" {
 
 # Creating 2nd EC2 instance in Public Subnet
 resource "aws_instance" "demoinstance1" {
-  ami                         = "ami-087c17d1fe0178315"
-  instance_type               = "t2.micro"
+  ami                         = var.server_ami
+  instance_type               = var.server_instance_type
   count                       = 1
   key_name                    = "awslearning"
   vpc_security_group_ids      = ["${aws_security_group.demosg.id}"]

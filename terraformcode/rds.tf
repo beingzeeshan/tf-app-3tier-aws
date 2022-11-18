@@ -13,11 +13,11 @@ resource "aws_db_instance" "default" {
   db_subnet_group_name   = aws_db_subnet_group.default.id
   engine                 = "mysql"
   engine_version         = "8.0.28"
-  instance_class         = "db.t2.micro"
+  instance_class         = var.db_instance_type
   multi_az               = true
   name                   = "mydb"
-  username               = "username"
-  password               = "password"
+  username               = var.rds_user
+  password               = var.rds_password
   skip_final_snapshot    = true
   vpc_security_group_ids = [aws_security_group.database-sg.id]
 }
