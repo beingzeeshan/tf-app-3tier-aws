@@ -1,6 +1,6 @@
 objectt = { "a" : { "b" : { "c" : "d" } } }
 
-targetKey = "a"
+targetKey = input("Enter the keys: ")
 
 def getValue(objectt, targetKey):
     if(type(objectt) == str or type(objectt) == int or type(objectt) == float):
